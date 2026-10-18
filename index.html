@@ -49,14 +49,59 @@
     </button>
 
     <section id="surprise" class="surprise hidden">
-      <p class="big-heart">💖</p>
-      <h2>Un deseo para ti</h2>
-      <p>
-        Que nunca te falten personas que te quieran,
-        motivos para reír y valentía para perseguir
-        todo aquello que te haga feliz.
-      </p>
-      <p class="signature">Con mucho cariño, de alguien que te aprecia. ♡</p>
+      
+      <div class="jungle">
+        <div class="moon">☀️</div>
+        <div class="fireflies">✦ · ✧ · ✦ · ✧</div>
+      
+        <h2 class="jungle-heading">El pequeño reino de la vida</h2>
+        <p class="jungle-instruction">
+          Explora este ecosistema y descubre tus sorpresas
+        </p>
+      
+        <div class="animals">
+          <button class="animal lion" data-animal="lion"
+                  aria-label="Descubre el mensaje del león">
+            🦁
+          </button>
+      
+          <button class="animal snake" data-animal="snake"
+                  aria-label="Descubre el mensaje de la serpiente">
+            🐍
+          </button>
+      
+          <button class="animal butterfly" data-animal="butterfly"
+                  aria-label="Descubre el mensaje de la mariposa">
+            🦋
+          </button>
+        </div>
+      
+        <div class="plants">🌿 🌴 🍃 🌱 🌴 🌿</div>
+      </div>
+      
+      <div id="animalMessage" class="animal-message" aria-live="polite">
+        Toca uno de los animales para descubrir un mensaje. 💚
+      </div>
+      
+      <button id="finalWish" class="final-wish">
+        Descubrir mi felicitación 💌
+      </button>
+      
+      <div id="birthdayMessage" class="birthday-message hidden">
+        <div class="big-heart">💖</div>
+        <h2>¡Feliz cumpleaños, bióloga increíble!</h2>
+        <p>
+          Que nunca pierdas la curiosidad por descubrir el mundo,
+          la valentía para explorar nuevos caminos y la capacidad
+          de maravillarte con la vida.
+        </p>
+        <p>
+          Que tu próxima vuelta al sol esté llena de aventuras,
+          descubrimientos y momentos inolvidables. 🌎
+        </p>
+        <p>¡El mundo es más fascinante con personas como tú! 🧬</p>
+      </div>
+
     </section>
 
     <button id="confettiButton" class="secondary">
