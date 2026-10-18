@@ -259,3 +259,163 @@ footer {
     scroll-behavior: auto !important;
   }
 }
+
+
+.jungle {
+  position: relative;
+  min-height: 300px;
+  padding: 28px 12px;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: 24px;
+  color: #f5fff2;
+  background:
+    radial-gradient(circle at 50% 25%, #c4e8a6 0%, transparent 28%),
+    linear-gradient(180deg, #173d48, #28644e 70%, #153d32);
+}
+
+.jungle::before,
+.jungle::after {
+  content: "🌿";
+  position: absolute;
+  font-size: 5rem;
+  z-index: -1;
+}
+
+.jungle::before {
+  top: 0;
+  left: -12px;
+  transform: rotate(-25deg);
+}
+
+.jungle::after {
+  top: 0;
+  right: -12px;
+  transform: rotate(25deg) scaleX(-1);
+}
+
+.moon {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  font-size: 2rem;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.fireflies {
+  position: absolute;
+  inset: 15px 0 auto;
+  color: #f7f4a2;
+  letter-spacing: 14px;
+  animation: firefly 3s ease-in-out infinite alternate;
+}
+
+.jungle-heading {
+  margin: 15px 0 8px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.3rem, 4vw, 1.8rem);
+}
+
+.jungle-instruction {
+  font-size: 0.85rem;
+  padding: 0 10px;
+}
+
+.animals {
+  min-height: 145px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px, 5vw, 35px);
+}
+
+.animal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  margin: 0;
+  background: transparent;
+  box-shadow: none;
+  border: 0;
+  border-radius: 50%;
+  font-size: clamp(2.8rem, 10vw, 4.5rem);
+  cursor: pointer;
+  animation: animalFloat 3s ease-in-out infinite;
+  transition: filter 0.2s, transform 0.2s;
+}
+
+.animal:hover {
+  filter: drop-shadow(0 0 12px #f5ffa8);
+  transform: scale(1.18);
+}
+
+.animal:focus-visible {
+  outline: 2px solid white;
+}
+
+.snake {
+  animation-delay: -1s;
+}
+
+.butterfly {
+  animation-delay: -2s;
+}
+
+.plants {
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
+  letter-spacing: 3px;
+}
+
+.animal-message,
+.birthday-message {
+  margin: 20px 0;
+  padding: 22px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #f0fae9, #fff1f6);
+  color: #365343;
+  line-height: 1.8;
+}
+
+.animal-message {
+  min-height: 70px;
+}
+
+.birthday-message h2 {
+  color: #b84f7a;
+  font-family: "Playfair Display", serif;
+}
+
+.final-wish {
+  background: linear-gradient(135deg, #d95d88, #8d75bb);
+}
+
+@keyframes animalFloat {
+  0%, 100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -12px;
+  }
+}
+
+@keyframes glow {
+  from {
+    filter: brightness(0.85);
+  }
+  to {
+    filter: brightness(1.35) drop-shadow(0 0 12px #fff5a6);
+  }
+}
+
+@keyframes firefly {
+  from {
+    opacity: 0.35;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(8px);
+  }
+}
+
