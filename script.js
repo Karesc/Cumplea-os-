@@ -82,22 +82,25 @@ const mensajes = {
   lion: {
     nombre: "El león de la selva 🦁",
     texto:
-      "Representa la valentía. Que siempre tengas el coraje " +
-      "de explorar nuevos territorios y perseguir tus sueños."
+      "Deseo que nunca te falte la fuerza " +
+      "y el coraje para conquistar nuevos territorios, romperla y " +
+      "perseguir todo lo que sueñas. ¡Tú puedes con todo!"
   },
 
   snake: {
     nombre: "La serpiente exploradora 🐍",
     texto:
-      "Representa la adaptación y la renovación. Que cada " +
-      "cambio te abra las puertas a descubrimientos increíbles."
+      "Que cada cambio en " +
+      "tu vida sea una oportunidad para crecer, reinventarte y descubrir " +
+      "cosas increíbles sobre ti y el mundo."
   },
 
   butterfly: {
     nombre: "La mariposa curiosa 🦋",
     texto:
-      "Representa la transformación. Que nunca dejes de " +
-      "aprender, cambiar y maravillarte con la naturaleza."
+      "Que jamás pierdas " +
+      "esa chispa para aprender, volar alto y dejarte sorprender por la " +
+      "magia de las pequeñas cosas."
   }
 };
 
