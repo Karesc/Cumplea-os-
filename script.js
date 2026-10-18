@@ -75,3 +75,73 @@ function lanzarConfeti(cantidad) {
 window.addEventListener("load", () => {
   setTimeout(() => lanzarConfeti(35), 700);
 });
+
+
+
+const mensajes = {
+  lion: {
+    nombre: "El león de la selva 🦁",
+    texto:
+      "Representa la valentía. Que siempre tengas el coraje " +
+      "de explorar nuevos territorios y perseguir tus sueños."
+  },
+
+  snake: {
+    nombre: "La serpiente exploradora 🐍",
+    texto:
+      "Representa la adaptación y la renovación. Que cada " +
+      "cambio te abra las puertas a descubrimientos increíbles."
+  },
+
+  butterfly: {
+    nombre: "La mariposa curiosa 🦋",
+    texto:
+      "Representa la transformación. Que nunca dejes de " +
+      "aprender, cambiar y maravillarte con la naturaleza."
+  }
+};
+
+const animalMessage = document.getElementById("animalMessage");
+
+document.querySelectorAll("[data-animal]").forEach((animal) => {
+  animal.addEventListener("click", () => {
+    const info = mensajes[animal.dataset.animal];
+
+    animalMessage.innerHTML =
+      `<strong>${info.nombre}</strong><br>${info.texto}`;
+
+    animalMessage.animate(
+      [
+        { opacity: 0, transform: "translateY(10px)" },
+        { opacity: 1, transform: "translateY(0)" }
+      ],
+      { duration: 450, easing: "ease-out" }
+    );
+
+    // Reacción del animal seleccionado
+    animal.animate(
+      [
+        { transform: "scale(1)" },
+        { transform: "scale(1.4) rotate(-8deg)" },
+        { transform: "scale(1)" }
+      ],
+      { duration: 500 }
+    );
+  });
+});
+
+document.getElementById("finalWish").addEventListener("click", () => {
+  const message = document.getElementById("birthdayMessage");
+
+  message.classList.remove("hidden");
+  document.getElementById("finalWish").textContent =
+    "¡Feliz cumpleaños! 💖";
+
+  message.scrollIntoView({
+    behavior: "smooth",
+    block: "nearest"
+  });
+
+  lanzarConfeti(100);
+});
+
